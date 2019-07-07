@@ -53,6 +53,9 @@ class RoomsTest < MiniTest::Test
     assert_equal(2, @room1.number_of_guests_in_room)
   end
 
-
+  def test_get_guest_reaction_to_room()
+    @room2.add_song_to_room(@song1)
+    assert_equal("Woohoo!", @room2.get_guest_reaction_to_room(@guest2))
+  end
 
 end

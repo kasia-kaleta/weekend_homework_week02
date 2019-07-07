@@ -27,12 +27,19 @@ class Rooms
     else
       @guests << guest
     end
-
+    p get_guest_reaction_to_room(guest)
   end
 
   def check_out_guest_from_room(guest)
     @guests.delete(guest)
   end
 
+  def get_guest_reaction_to_room(guest)
+    for song in @songs
+      if song.title == guest.favorite_song
+        return "Woohoo!"
+      end
+    end
+  end
 
 end
