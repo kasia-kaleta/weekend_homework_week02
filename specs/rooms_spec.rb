@@ -3,10 +3,17 @@ require('minitest/rg')
 require_relative("../rooms.rb")
 require_relative("../songs.rb")
 require_relative("../guests.rb")
+require_relative("../bar.rb")
 
 class RoomsTest < MiniTest::Test
 
   def setup
+    @bar_item1 = BarItem.new("wine", 6)
+    @bar_item2 = BarItem.new("beer", 4)
+    @bar_item3 = BarItem.new("cider", 5)
+
+    @stock = [@bar_item1, @bar_item2, @bar_item3]
+    
     @room1 = Rooms.new("Sapphire", 8)
     @room2 = Rooms.new("Amber", 12)
     @room3 = Rooms.new("Amethyst", 16)

@@ -1,4 +1,4 @@
-class BarTab
+class BarItem
 
   attr_reader :drink, :price
 

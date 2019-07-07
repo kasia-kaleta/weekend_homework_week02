@@ -7,6 +7,7 @@ class Rooms
     @entry_fee = entry_fee
     @songs = []
     @guests = []
+    @stock = []
   end
 
   def add_song_to_room(song)
